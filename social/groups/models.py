@@ -3,6 +3,7 @@ from django.utils.text import slugify
 
 import misaka
 from django.contrib.auth import get_user_model
+from django.core.urlresolvers import reverse
 from django import template
 
 User = get_user_model()
@@ -39,4 +40,4 @@ class GroupMember(models.Model):
         return self.user.username
 
     class Meta:
-        unique_together = ('group', 'user')
+        unique_together = ['group', 'user']

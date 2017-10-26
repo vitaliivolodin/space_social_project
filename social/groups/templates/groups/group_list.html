@@ -1,4 +1,4 @@
-{% extends "groups/groups_base.html" %}
+{% extends "groups/group_base.html" %}
 
 {% block pregroup %}
 
@@ -14,7 +14,7 @@
         <p> Welcome to the groups page! </p>
     </div>
     {% if user.is_authenticated %}
-        <a href="{% url 'groups:creave' %}"
+        <a href="{% url 'groups:create' %}"
             class="btn btn-md btn-fill btn-warning">
                 <span class="glyphicon glyphicon-plus-sign"> Create New Group</span>
             </a>
